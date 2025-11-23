@@ -1,0 +1,61 @@
+Recommended tech stack (ordered learning path)
+
+Stage 0 — Prerequisites (if not solid already)
+Python (advanced): generators, iterators, context managers, typing, packaging, virtualenv/venv.
+SQL (advanced): joins, window functions, CTEs, grouping sets, indexes, explain plans.
+Linux & shell: bash, file ops, cron, basic networking.
+Git & basic CI concepts
+Why: Every data pipeline relies on Python + SQL + Linux skills.
+
+Stage 1 — Core data engineering tools (essential)
+Pandas (for small-scale ETL & prototyping)
+PySpark / Apache Spark (process big data; RDD/DataFrame APIs)
+Relational Databases: MySQL/Postgres and their admin basics
+Columnar stores / Data Warehouse: basics of Redshift / BigQuery / Snowflake (concepts: partitioning, clustering)
+Practical skills: read/write from CSV/Parquet, partitioning, caching, joins at scale, writing efficient PySpark transformations.
+
+Stage 2 — Orchestration & workflow management
+Apache Airflow (DAGs, operators, scheduling, sensors)
+Prefect (optional alternative)
+Task scheduling best practices (idempotence, retries, SLAs)
+Why: Production pipelines require reliable orchestration.
+
+Stage 3 — Streaming & messaging (real-time)
+Apache Kafka (producer/consumer, topics, partitions)
+Spark Structured Streaming or Flink (stream processing)
+Message brokers: RabbitMQ (optional)
+Why: Many pipelines need low-latency ingestion / streaming ETL.
+
+Stage 4 — Cloud & storage
+Pick one cloud provider (AWS recommended initially), learn:
+Storage: S3 (object storage) / GCS
+Compute: EC2, EMR (or Dataproc)
+Managed Data Services: AWS Glue, Redshift, Athena (or GCP BigQuery)
+IAM & security basics
+Why: Most production systems run on cloud.
+
+Stage 5 — Containerization & orchestration
+Docker (build images, multi-stage builds)
+Kubernetes (deploy jobs, cronjobs, scaling) — basic usage
+ECS / EKS (cloud-specific)
+Why: Packaging jobs & scaling.
+
+Stage 6 — CI/CD, testing & monitoring
+CI/CD: GitHub Actions / GitLab CI / Jenkins
+Unit testing for pipelines (pytest, moto for AWS mocks)
+Integration testing (localstack for AWS)
+Observability: Prometheus/Grafana, ELK stack, Datadog (or cloud alternatives)
+Data quality / testing: Great Expectations
+Why: Production reliability and SLOs.
+
+Stage 7 — Data modeling, architecture & governance
+Data modeling: star schema, dimensional modeling, slowly changing dimensions (SCD)
+Data contracts & contracts testing
+Governance: access controls, cataloging (e.g., Amundsen/Glue Data Catalog)
+
+Stage 8 — Optional but high-value
+Spark tuning (memory, partitions)
+Partitioning/Compaction strategies for Parquet
+Cost optimization on cloud
+Basics of big data file formats: Parquet, Avro, ORC
+SQL-on-Hadoop: Hive/Presto/Trino
