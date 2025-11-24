@@ -32,7 +32,7 @@
 #     print(i)
 # ---------------------------------------
 
-# read line by line data from a file using generator : - 
+"""read line by line data from a file using generator : - """ 
 
 # import time
 
@@ -48,8 +48,24 @@
 #     print(i)
 # ----------------------------------------------
 
+""" Context Manager : """
 
-
-
+# class ContextManager:
     
+#     def __init__(self):
+#         print("init method Called")
+    
+#     def __enter__(self):
+#         print("enter method called")
+
+#     def __exit__(self, exc_type, exc_value, exc_traceback):
+#         print("exit method called")
+
+# with ContextManager() as manager:
+#     print("with statement block")
+
+
+# ----------------------------------------------------------
+
+
 
